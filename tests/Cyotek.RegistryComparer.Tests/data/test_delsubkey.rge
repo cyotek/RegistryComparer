@@ -1,0 +1,37 @@
+﻿{
+  "Keys": [
+    {
+      "Name": "HKEY_CURRENT_USER\\SOFTWARE\\Cyotek\\Registry Comparer\\Tests",
+      "SubKeys": [
+        {
+          "Name": "Alpha",
+          "Values": [
+            {
+              "Name": "string",
+              "Type": 1,
+              "Value": "alpha"
+            },
+            {
+              "Name": "multi_string",
+              "Type": 7,
+              "Value": "beta\ngamma"
+            },
+            {
+              "Name": "expanded_string",
+              "Type": 2,
+              "Value": "%systemroot%\\delta"
+            }
+          ]
+        }
+      ],
+      "Values": [
+        {
+          "Name": "",
+          "Type": 1,
+          "Value": ""
+        }
+      ]
+    }
+  ],
+  "Timestamp": "2016-01-01T12:00:00Z"
+}

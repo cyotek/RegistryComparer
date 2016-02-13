@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyotek.RegistryComparer.Client", "src\Cyotek.RegistryComparer.Client\Cyotek.RegistryComparer.Client.csproj", "{AE956DE8-DDCE-40C0-BBAE-EA4C3AD245E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{D1B68253-1046-4685-B46D-4B7E4D4218E3}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyotek.RegistryComparer.CommandLineInterface", "src\Cyotek.RegistryComparer.CommandLineInterface\Cyotek.RegistryComparer.CommandLineInterface.csproj", "{ADAE61EC-6B71-4B47-A226-1228352ED7BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyotek.RegistryComparer", "src\Cyotek.RegistryComparer\Cyotek.RegistryComparer.csproj", "{DF3D3650-1DA6-4159-A1DC-7CC7A706EEB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyotek.RegistryComparer.Tests", "tests\Cyotek.RegistryComparer.Tests\Cyotek.RegistryComparer.Tests.csproj", "{43401FBE-AE23-46BC-9946-B3FC6FE6356C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE956DE8-DDCE-40C0-BBAE-EA4C3AD245E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE956DE8-DDCE-40C0-BBAE-EA4C3AD245E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE956DE8-DDCE-40C0-BBAE-EA4C3AD245E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE956DE8-DDCE-40C0-BBAE-EA4C3AD245E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADAE61EC-6B71-4B47-A226-1228352ED7BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADAE61EC-6B71-4B47-A226-1228352ED7BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADAE61EC-6B71-4B47-A226-1228352ED7BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADAE61EC-6B71-4B47-A226-1228352ED7BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF3D3650-1DA6-4159-A1DC-7CC7A706EEB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF3D3650-1DA6-4159-A1DC-7CC7A706EEB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF3D3650-1DA6-4159-A1DC-7CC7A706EEB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF3D3650-1DA6-4159-A1DC-7CC7A706EEB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43401FBE-AE23-46BC-9946-B3FC6FE6356C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43401FBE-AE23-46BC-9946-B3FC6FE6356C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43401FBE-AE23-46BC-9946-B3FC6FE6356C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43401FBE-AE23-46BC-9946-B3FC6FE6356C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+nuget/
+packages/
+.vs/
+bin/
+obj/
+dist/
+
+*.ncrunchsolution
+*.ncrunchproject
+*.user
+*.cache

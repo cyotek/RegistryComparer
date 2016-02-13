@@ -1,0 +1,47 @@
+﻿{
+  "Keys": [
+    {
+      "Name": "HKEY_CURRENT_USER\\SOFTWARE\\Cyotek\\Registry Comparer\\Tests",
+      "SubKeys": [
+        {
+          "Name": "Alpha",
+          "Values": [
+            {
+              "Name": "string",
+              "Type": 1,
+              "Value": "eta"
+            },
+            {
+              "Name": "expanded_string",
+              "Type": 2,
+              "Value": "%systemroot%\\theta"
+            },
+            {
+              "Name": "iota",
+              "Type": 1,
+              "Value": "kappa"
+            }
+          ]
+        },
+        {
+          "Name": "Gamma",
+          "Values": [
+            {
+              "Name": "",
+              "Type": 1,
+              "Value": "zeta"
+            }
+          ]
+        }
+      ],
+      "Values": [
+        {
+          "Name": "",
+          "Type": 1,
+          "Value": ""
+        }
+      ]
+    }
+  ],
+  "Timestamp": "2016-02-13T14:59:53.861754Z"
+}

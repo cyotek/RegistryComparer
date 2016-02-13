@@ -1,0 +1,57 @@
+﻿{
+  "Keys": [
+    {
+      "Name": "HKEY_CURRENT_USER\\SOFTWARE\\Cyotek\\Registry Comparer\\Tests",
+      "SubKeys": [
+        {
+          "Name": "Alpha",
+          "Values": [
+            {
+              "Name": "string",
+              "Type": 1,
+              "Value": "eta"
+            },
+            {
+              "Name": "multi_string",
+              "Type": 7,
+              "Value": "beta\ngamma"
+            },
+            {
+              "Name": "expanded_string",
+              "Type": 2,
+              "Value": "%systemroot%\\theta"
+            }
+          ]
+        },
+        {
+          "Name": "Beta",
+          "Values": [
+            {
+              "Name": "dword",
+              "Type": 4,
+              "Value": "2147483647"
+            },
+            {
+              "Name": "qword",
+              "Type": 11,
+              "Value": "9223372036854775807"
+            },
+            {
+              "Name": "binary",
+              "Type": 3,
+              "Value": "45 50 53 49 4c 4f 4e"
+            }
+          ]
+        }
+      ],
+      "Values": [
+        {
+          "Name": "",
+          "Type": 1,
+          "Value": ""
+        }
+      ]
+    }
+  ],
+  "Timestamp": "2016-01-01T12:00:00Z"
+}
