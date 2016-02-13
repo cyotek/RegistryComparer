@@ -1,7 +1,7 @@
 Cyotek Registry Comparer
 ========================
 
-![gui](C:/Checkout/cyotek/source/Tools/RegistryComparer/gui.png)
+![gui](gui.png)
 
 A simple tool to capture snapshots of the state of one more registry keys, then compare them for differences. Includes both an easy to use GUI and CLI clients.
 
@@ -58,18 +58,18 @@ This example will compare the snapshot `test_delsubkey.rge` against `test_base.r
 Screenshots
 -----------
 
-![cli-compare](C:/Checkout/cyotek/source/Tools/RegistryComparer/cli-compare.png)
+![cli-compare](cli-compare.png)
 
 Compare a pair of snapshots using the CLI tool
 
-![gui-compare](C:/Checkout/cyotek/source/Tools/RegistryComparer/gui-compare.png)
+![gui-compare](gui-compare.png)
 
 Comparing the same snapshots using the GUI tool
 
-![cli-snapshot](C:/Checkout/cyotek/source/Tools/RegistryComparer/cli-snapshot.png)
+![cli-snapshot](cli-snapshot.png)
 
 Capturing a new snapshot using the CLI tool
 
-![gui-viewsnapshot](C:/Checkout/cyotek/source/Tools/RegistryComparer/gui-viewsnapshot.png)
+![gui-viewsnapshot](gui-viewsnapshot.png)
 
 Viewing a snapshot using the GUI tool
