@@ -29,6 +29,7 @@
     private void InitializeComponent()
     {
       this.components = new System.ComponentModel.Container();
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
       this.hivesGroupBox = new System.Windows.Forms.GroupBox();
       this.keysTextBox = new System.Windows.Forms.TextBox();
       this.keyRadioButton = new System.Windows.Forms.RadioButton();
@@ -46,18 +47,21 @@
       this.statusToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
       this.snapshotBackgroundWorker = new System.ComponentModel.BackgroundWorker();
       this.snapshotsGroupBox = new System.Windows.Forms.GroupBox();
+      this.secondComboBox = new System.Windows.Forms.ComboBox();
+      this.secondLabel = new System.Windows.Forms.Label();
+      this.firstComboBox = new System.Windows.Forms.ComboBox();
+      this.firstLabel = new System.Windows.Forms.Label();
       this.snapshotsListBox = new System.Windows.Forms.ListBox();
       this.loadFileListDelayTimer = new System.Windows.Forms.Timer(this.components);
       this.viewButton = new System.Windows.Forms.Button();
       this.compareBackgroundWorker = new System.ComponentModel.BackgroundWorker();
-      this.firstLabel = new System.Windows.Forms.Label();
-      this.firstComboBox = new System.Windows.Forms.ComboBox();
-      this.secondLabel = new System.Windows.Forms.Label();
-      this.secondComboBox = new System.Windows.Forms.ComboBox();
+      this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+      this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
       this.hivesGroupBox.SuspendLayout();
       this.outputOptionsGroupBox.SuspendLayout();
       this.statusStrip.SuspendLayout();
       this.snapshotsGroupBox.SuspendLayout();
+      this.tableLayoutPanel1.SuspendLayout();
       this.SuspendLayout();
       // 
       // hivesGroupBox
@@ -206,6 +210,8 @@
       // 
       this.outputFolderTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+      this.outputFolderTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+      this.outputFolderTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
       this.outputFolderTextBox.Location = new System.Drawing.Point(6, 21);
       this.outputFolderTextBox.Name = "outputFolderTextBox";
       this.outputFolderTextBox.Size = new System.Drawing.Size(227, 20);
@@ -238,10 +244,7 @@
       this.snapshotsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.snapshotsGroupBox.Controls.Add(this.secondComboBox);
-      this.snapshotsGroupBox.Controls.Add(this.secondLabel);
-      this.snapshotsGroupBox.Controls.Add(this.firstComboBox);
-      this.snapshotsGroupBox.Controls.Add(this.firstLabel);
+      this.snapshotsGroupBox.Controls.Add(this.tableLayoutPanel1);
       this.snapshotsGroupBox.Controls.Add(this.snapshotsListBox);
       this.snapshotsGroupBox.Location = new System.Drawing.Point(12, 225);
       this.snapshotsGroupBox.Name = "snapshotsGroupBox";
@@ -249,6 +252,48 @@
       this.snapshotsGroupBox.TabIndex = 2;
       this.snapshotsGroupBox.TabStop = false;
       this.snapshotsGroupBox.Text = "&Snapshots";
+      // 
+      // secondComboBox
+      // 
+      this.secondComboBox.Dock = System.Windows.Forms.DockStyle.Top;
+      this.secondComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+      this.secondComboBox.FormattingEnabled = true;
+      this.secondComboBox.Location = new System.Drawing.Point(157, 16);
+      this.secondComboBox.Name = "secondComboBox";
+      this.secondComboBox.Size = new System.Drawing.Size(148, 21);
+      this.secondComboBox.TabIndex = 3;
+      this.secondComboBox.SelectedIndexChanged += new System.EventHandler(this.secondComboBox_SelectedIndexChanged);
+      // 
+      // secondLabel
+      // 
+      this.secondLabel.AutoSize = true;
+      this.secondLabel.Location = new System.Drawing.Point(154, 0);
+      this.secondLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+      this.secondLabel.Name = "secondLabel";
+      this.secondLabel.Size = new System.Drawing.Size(47, 13);
+      this.secondLabel.TabIndex = 2;
+      this.secondLabel.Text = "Sec&ond:";
+      // 
+      // firstComboBox
+      // 
+      this.firstComboBox.Dock = System.Windows.Forms.DockStyle.Top;
+      this.firstComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+      this.firstComboBox.FormattingEnabled = true;
+      this.firstComboBox.Location = new System.Drawing.Point(3, 16);
+      this.firstComboBox.Name = "firstComboBox";
+      this.firstComboBox.Size = new System.Drawing.Size(148, 21);
+      this.firstComboBox.TabIndex = 1;
+      this.firstComboBox.SelectedIndexChanged += new System.EventHandler(this.firstComboBox_SelectedIndexChanged);
+      // 
+      // firstLabel
+      // 
+      this.firstLabel.AutoSize = true;
+      this.firstLabel.Location = new System.Drawing.Point(0, 0);
+      this.firstLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+      this.firstLabel.Name = "firstLabel";
+      this.firstLabel.Size = new System.Drawing.Size(29, 13);
+      this.firstLabel.TabIndex = 0;
+      this.firstLabel.Text = "F&irst:";
       // 
       // snapshotsListBox
       // 
@@ -260,7 +305,7 @@
       this.snapshotsListBox.Location = new System.Drawing.Point(6, 19);
       this.snapshotsListBox.Name = "snapshotsListBox";
       this.snapshotsListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-      this.snapshotsListBox.Size = new System.Drawing.Size(308, 129);
+      this.snapshotsListBox.Size = new System.Drawing.Size(308, 123);
       this.snapshotsListBox.TabIndex = 0;
       // 
       // loadFileListDelayTimer
@@ -283,41 +328,24 @@
       this.compareBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.compareBackgroundWorker_DoWork);
       this.compareBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.compareBackgroundWorker_RunWorkerCompleted);
       // 
-      // firstLabel
+      // tableLayoutPanel1
       // 
-      this.firstLabel.AutoSize = true;
-      this.firstLabel.Location = new System.Drawing.Point(3, 151);
-      this.firstLabel.Name = "firstLabel";
-      this.firstLabel.Size = new System.Drawing.Size(29, 13);
-      this.firstLabel.TabIndex = 1;
-      this.firstLabel.Text = "F&irst:";
-      // 
-      // firstComboBox
-      // 
-      this.firstComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-      this.firstComboBox.FormattingEnabled = true;
-      this.firstComboBox.Location = new System.Drawing.Point(6, 167);
-      this.firstComboBox.Name = "firstComboBox";
-      this.firstComboBox.Size = new System.Drawing.Size(121, 21);
-      this.firstComboBox.TabIndex = 2;
-      // 
-      // secondLabel
-      // 
-      this.secondLabel.AutoSize = true;
-      this.secondLabel.Location = new System.Drawing.Point(130, 151);
-      this.secondLabel.Name = "secondLabel";
-      this.secondLabel.Size = new System.Drawing.Size(47, 13);
-      this.secondLabel.TabIndex = 3;
-      this.secondLabel.Text = "Sec&ond:";
-      // 
-      // secondComboBox
-      // 
-      this.secondComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-      this.secondComboBox.FormattingEnabled = true;
-      this.secondComboBox.Location = new System.Drawing.Point(133, 167);
-      this.secondComboBox.Name = "secondComboBox";
-      this.secondComboBox.Size = new System.Drawing.Size(121, 21);
-      this.secondComboBox.TabIndex = 4;
+      this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.tableLayoutPanel1.ColumnCount = 2;
+      this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+      this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+      this.tableLayoutPanel1.Controls.Add(this.firstLabel, 0, 0);
+      this.tableLayoutPanel1.Controls.Add(this.secondComboBox, 1, 1);
+      this.tableLayoutPanel1.Controls.Add(this.secondLabel, 1, 0);
+      this.tableLayoutPanel1.Controls.Add(this.firstComboBox, 0, 1);
+      this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 148);
+      this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+      this.tableLayoutPanel1.RowCount = 2;
+      this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+      this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+      this.tableLayoutPanel1.Size = new System.Drawing.Size(308, 40);
+      this.tableLayoutPanel1.TabIndex = 1;
       // 
       // MainForm
       // 
@@ -336,6 +364,7 @@
       this.Controls.Add(this.compareButton);
       this.Controls.Add(this.takeSnapshotButton);
       this.Controls.Add(this.hivesGroupBox);
+      this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Name = "MainForm";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Cyotek Registry Comparer";
@@ -346,7 +375,8 @@
       this.statusStrip.ResumeLayout(false);
       this.statusStrip.PerformLayout();
       this.snapshotsGroupBox.ResumeLayout(false);
-      this.snapshotsGroupBox.PerformLayout();
+      this.tableLayoutPanel1.ResumeLayout(false);
+      this.tableLayoutPanel1.PerformLayout();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -379,6 +409,8 @@
     private System.Windows.Forms.Label secondLabel;
     private System.Windows.Forms.ComboBox firstComboBox;
     private System.Windows.Forms.Label firstLabel;
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+    private System.Windows.Forms.ToolTip toolTip;
   }
 }
 

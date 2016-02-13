@@ -129,4 +129,30 @@
   <metadata name="compareBackgroundWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>541, 17</value>
   </metadata>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>759, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAEBAQAAAAAAAoAQAAJgAAACAgEAAAAAAA6AIAAE4BAAAoAAAAEAAAACAAAAABAAQAAAAAAMAA
+        AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAMDAwACAgIAAAAD/AAD/
+        AAAA//8A/wAAAP8A/wD//wAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOYAAAD+YAAIZgCA5u9gAA
+        jvAI728GDwAIgAj+YPD+YAAACIiP5g9gAAAAAA72DvAAAIDgiI8PAAAAjvAI/vZgAACPZmjoj2AAAIiO
+        9mj++AAAAAhv5uiAAAAAAI74gAAAAAAACIAAAAAA///////5///48P//4HD//4Aw//+AGf//gA///4AP
+        ///ID///AA///wAP//8AD///AA///+Af///wf///+f///ygAAAAgAAAAQAAAAAEABAAAAAAAgAIAAAAA
+        AAAAAAAAEAAAAAAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICAgAAAAP8AAP8AAAD/
+        /wD/AAAA/wD/AP//AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAPYAAAAAAAAAAAAAAAAAgO/mYAAAAAAAAAAAAAAAAI7+9mYAAAAAAAAA
+        D2AAAACP7+ZmAAAAAAAADv5mAAAAjv/+ZgAAAAAACO/vZmAAAI//7+YAAAAADmj+/mZgAACO/v7+AAAI
+        D+9o7//mYAAACO/v6IAACP7+aP/+/mD2AACO+IAAAAjv72jv4AZg5mAACIAAAAAI/v/2gA5gbvZmAAAA
+        AAAACP/v6A/vZg/mZgAAAAAAAAj+/vj+/mZg/mYAAAAAAAAAAO/o7+9mYO/mAAAAAAAAAPYOaP7/9mAA
+        /gAAAAAAgO/mYAj/7+9g5gZgAAAAAI7+9mYI/v7+8PZgAAAAAACP7+ZmAI/v74jmZgAAAAAAjv/+ZgAI
+        /oj+9mYAAAAAAI//7+YP74iP7/9mAAAAAACO/v7+Dv5mj/7+9gAAAAAACO/v6I/vZo/v7+8AAAAAAACO
+        +Ij+//Zo/v74gAAAAAAACIAI/+/vZo/ogAAAAAAAAAAACP7+/vYIgAAAAAAAAAAAAACP7++IAAAAAAAA
+        AAAAAAAACP6IAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////
+        /8////8H///8A//5/AH/4PwB/4B8Af4APAH4ADwB4AAOAeAABwfgAAOf4AAB/+AAAf/gAAH/8AAB/8AA
+        Af8AgAH/AAAD/wBAAf8AAAH/AAAB/wAAAf+AAAH/wAAB/+YAB//+AJ///wD///+D////z////////w==
+</value>
+  </data>
 </root>

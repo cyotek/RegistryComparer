@@ -169,6 +169,11 @@ namespace Cyotek.RegistryComparer.Client
       this.Close();
     }
 
+    private void firstComboBox_SelectedIndexChanged(object sender, EventArgs e)
+    {
+      this.SetToolTip(firstComboBox);
+    }
+
     private string[] GetKeysToScan()
     {
       List<string> keys;
@@ -304,11 +309,25 @@ namespace Cyotek.RegistryComparer.Client
       secondComboBox.Items.Remove(file);
     }
 
+    private void secondComboBox_SelectedIndexChanged(object sender, EventArgs e)
+    {
+      this.SetToolTip(secondComboBox);
+    }
+
     private void SetStatus(string message)
     {
       statusToolStripStatusLabel.Text = message;
 
       this.UseWaitCursor = !string.IsNullOrEmpty(message);
+    }
+
+    private void SetToolTip(ComboBox comboBox)
+    {
+      FileInfo info;
+
+      info = comboBox.SelectedItem as FileInfo;
+
+      toolTip.SetToolTip(comboBox, info?.FullPath);
     }
 
     private void snapshotBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
