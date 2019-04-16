@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Cyotek.RegistryComparer.Client
 {
-  internal sealed partial class AboutDialog : Form
+  internal sealed partial class AboutDialog : BaseForm
   {
     #region Constructors
 

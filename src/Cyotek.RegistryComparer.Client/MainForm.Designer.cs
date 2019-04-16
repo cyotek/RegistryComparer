@@ -47,16 +47,16 @@
       this.statusToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
       this.snapshotBackgroundWorker = new System.ComponentModel.BackgroundWorker();
       this.snapshotsGroupBox = new System.Windows.Forms.GroupBox();
+      this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+      this.firstLabel = new System.Windows.Forms.Label();
       this.secondComboBox = new System.Windows.Forms.ComboBox();
       this.secondLabel = new System.Windows.Forms.Label();
       this.firstComboBox = new System.Windows.Forms.ComboBox();
-      this.firstLabel = new System.Windows.Forms.Label();
       this.snapshotsListBox = new System.Windows.Forms.ListBox();
       this.loadFileListDelayTimer = new System.Windows.Forms.Timer(this.components);
       this.viewButton = new System.Windows.Forms.Button();
       this.compareBackgroundWorker = new System.ComponentModel.BackgroundWorker();
       this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-      this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
       this.hivesGroupBox.SuspendLayout();
       this.outputOptionsGroupBox.SuspendLayout();
       this.statusStrip.SuspendLayout();
@@ -72,9 +72,9 @@
       this.hivesGroupBox.Controls.Add(this.keyRadioButton);
       this.hivesGroupBox.Controls.Add(this.hiveRadioButton);
       this.hivesGroupBox.Controls.Add(this.hivesListBox);
-      this.hivesGroupBox.Location = new System.Drawing.Point(12, 68);
+      this.hivesGroupBox.Location = new System.Drawing.Point(14, 78);
       this.hivesGroupBox.Name = "hivesGroupBox";
-      this.hivesGroupBox.Size = new System.Drawing.Size(320, 151);
+      this.hivesGroupBox.Size = new System.Drawing.Size(373, 174);
       this.hivesGroupBox.TabIndex = 1;
       this.hivesGroupBox.TabStop = false;
       this.hivesGroupBox.Text = "Source";
@@ -82,19 +82,19 @@
       // keysTextBox
       // 
       this.keysTextBox.AcceptsReturn = true;
-      this.keysTextBox.Location = new System.Drawing.Point(148, 91);
+      this.keysTextBox.Location = new System.Drawing.Point(173, 105);
       this.keysTextBox.Multiline = true;
       this.keysTextBox.Name = "keysTextBox";
       this.keysTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-      this.keysTextBox.Size = new System.Drawing.Size(100, 20);
+      this.keysTextBox.Size = new System.Drawing.Size(116, 22);
       this.keysTextBox.TabIndex = 3;
       // 
       // keyRadioButton
       // 
       this.keyRadioButton.AutoSize = true;
-      this.keyRadioButton.Location = new System.Drawing.Point(59, 19);
+      this.keyRadioButton.Location = new System.Drawing.Point(69, 22);
       this.keyRadioButton.Name = "keyRadioButton";
-      this.keyRadioButton.Size = new System.Drawing.Size(43, 17);
+      this.keyRadioButton.Size = new System.Drawing.Size(44, 19);
       this.keyRadioButton.TabIndex = 1;
       this.keyRadioButton.TabStop = true;
       this.keyRadioButton.Text = "&Key";
@@ -103,9 +103,9 @@
       // hiveRadioButton
       // 
       this.hiveRadioButton.AutoSize = true;
-      this.hiveRadioButton.Location = new System.Drawing.Point(6, 19);
+      this.hiveRadioButton.Location = new System.Drawing.Point(7, 22);
       this.hiveRadioButton.Name = "hiveRadioButton";
-      this.hiveRadioButton.Size = new System.Drawing.Size(47, 17);
+      this.hiveRadioButton.Size = new System.Drawing.Size(49, 19);
       this.hiveRadioButton.TabIndex = 0;
       this.hiveRadioButton.TabStop = true;
       this.hiveRadioButton.Text = "&Hive";
@@ -119,17 +119,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
       this.hivesListBox.FormattingEnabled = true;
       this.hivesListBox.IntegralHeight = false;
-      this.hivesListBox.Location = new System.Drawing.Point(6, 42);
+      this.hivesListBox.Location = new System.Drawing.Point(7, 48);
       this.hivesListBox.Name = "hivesListBox";
-      this.hivesListBox.Size = new System.Drawing.Size(308, 103);
+      this.hivesListBox.Size = new System.Drawing.Size(359, 118);
       this.hivesListBox.TabIndex = 2;
       // 
       // takeSnapshotButton
       // 
       this.takeSnapshotButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.takeSnapshotButton.Location = new System.Drawing.Point(338, 12);
+      this.takeSnapshotButton.Location = new System.Drawing.Point(394, 14);
       this.takeSnapshotButton.Name = "takeSnapshotButton";
-      this.takeSnapshotButton.Size = new System.Drawing.Size(75, 23);
+      this.takeSnapshotButton.Size = new System.Drawing.Size(87, 27);
       this.takeSnapshotButton.TabIndex = 3;
       this.takeSnapshotButton.Text = "Snapsho&t";
       this.takeSnapshotButton.UseVisualStyleBackColor = true;
@@ -138,21 +138,21 @@
       // compareButton
       // 
       this.compareButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.compareButton.Location = new System.Drawing.Point(338, 41);
+      this.compareButton.Location = new System.Drawing.Point(394, 47);
       this.compareButton.Name = "compareButton";
-      this.compareButton.Size = new System.Drawing.Size(75, 23);
+      this.compareButton.Size = new System.Drawing.Size(87, 27);
       this.compareButton.TabIndex = 4;
-      this.compareButton.Text = "&Compare...";
+      this.compareButton.Text = "&Compare";
       this.compareButton.UseVisualStyleBackColor = true;
       this.compareButton.Click += new System.EventHandler(this.compareButton_Click);
       // 
       // deleteButton
       // 
       this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.deleteButton.Location = new System.Drawing.Point(338, 108);
-      this.deleteButton.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
+      this.deleteButton.Location = new System.Drawing.Point(394, 125);
+      this.deleteButton.Margin = new System.Windows.Forms.Padding(3, 14, 3, 3);
       this.deleteButton.Name = "deleteButton";
-      this.deleteButton.Size = new System.Drawing.Size(75, 23);
+      this.deleteButton.Size = new System.Drawing.Size(87, 27);
       this.deleteButton.TabIndex = 6;
       this.deleteButton.Text = "&Delete...";
       this.deleteButton.UseVisualStyleBackColor = true;
@@ -161,12 +161,12 @@
       // aboutButton
       // 
       this.aboutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.aboutButton.Location = new System.Drawing.Point(338, 146);
-      this.aboutButton.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
+      this.aboutButton.Location = new System.Drawing.Point(394, 168);
+      this.aboutButton.Margin = new System.Windows.Forms.Padding(3, 14, 3, 3);
       this.aboutButton.Name = "aboutButton";
-      this.aboutButton.Size = new System.Drawing.Size(75, 23);
+      this.aboutButton.Size = new System.Drawing.Size(87, 27);
       this.aboutButton.TabIndex = 7;
-      this.aboutButton.Text = "&About...";
+      this.aboutButton.Text = "&About";
       this.aboutButton.UseVisualStyleBackColor = true;
       this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
       // 
@@ -174,9 +174,9 @@
       // 
       this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
       this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-      this.exitButton.Location = new System.Drawing.Point(338, 175);
+      this.exitButton.Location = new System.Drawing.Point(394, 202);
       this.exitButton.Name = "exitButton";
-      this.exitButton.Size = new System.Drawing.Size(75, 23);
+      this.exitButton.Size = new System.Drawing.Size(87, 27);
       this.exitButton.TabIndex = 8;
       this.exitButton.Text = "E&xit";
       this.exitButton.UseVisualStyleBackColor = true;
@@ -188,9 +188,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
       this.outputOptionsGroupBox.Controls.Add(this.outputFolderBrowseButton);
       this.outputOptionsGroupBox.Controls.Add(this.outputFolderTextBox);
-      this.outputOptionsGroupBox.Location = new System.Drawing.Point(12, 12);
+      this.outputOptionsGroupBox.Location = new System.Drawing.Point(14, 14);
       this.outputOptionsGroupBox.Name = "outputOptionsGroupBox";
-      this.outputOptionsGroupBox.Size = new System.Drawing.Size(320, 50);
+      this.outputOptionsGroupBox.Size = new System.Drawing.Size(373, 58);
       this.outputOptionsGroupBox.TabIndex = 0;
       this.outputOptionsGroupBox.TabStop = false;
       this.outputOptionsGroupBox.Text = "Output &Folder";
@@ -198,9 +198,9 @@
       // outputFolderBrowseButton
       // 
       this.outputFolderBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.outputFolderBrowseButton.Location = new System.Drawing.Point(239, 19);
+      this.outputFolderBrowseButton.Location = new System.Drawing.Point(279, 22);
       this.outputFolderBrowseButton.Name = "outputFolderBrowseButton";
-      this.outputFolderBrowseButton.Size = new System.Drawing.Size(75, 23);
+      this.outputFolderBrowseButton.Size = new System.Drawing.Size(87, 27);
       this.outputFolderBrowseButton.TabIndex = 1;
       this.outputFolderBrowseButton.Text = "&Browse...";
       this.outputFolderBrowseButton.UseVisualStyleBackColor = true;
@@ -212,9 +212,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
       this.outputFolderTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
       this.outputFolderTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
-      this.outputFolderTextBox.Location = new System.Drawing.Point(6, 21);
+      this.outputFolderTextBox.Location = new System.Drawing.Point(7, 24);
       this.outputFolderTextBox.Name = "outputFolderTextBox";
-      this.outputFolderTextBox.Size = new System.Drawing.Size(227, 20);
+      this.outputFolderTextBox.Size = new System.Drawing.Size(264, 23);
       this.outputFolderTextBox.TabIndex = 0;
       this.outputFolderTextBox.TextChanged += new System.EventHandler(this.outputFolderTextBox_TextChanged);
       // 
@@ -222,15 +222,16 @@
       // 
       this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusToolStripStatusLabel});
-      this.statusStrip.Location = new System.Drawing.Point(0, 422);
+      this.statusStrip.Location = new System.Drawing.Point(0, 490);
       this.statusStrip.Name = "statusStrip";
-      this.statusStrip.Size = new System.Drawing.Size(425, 22);
+      this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+      this.statusStrip.Size = new System.Drawing.Size(496, 22);
       this.statusStrip.TabIndex = 9;
       // 
       // statusToolStripStatusLabel
       // 
       this.statusToolStripStatusLabel.Name = "statusToolStripStatusLabel";
-      this.statusToolStripStatusLabel.Size = new System.Drawing.Size(410, 17);
+      this.statusToolStripStatusLabel.Size = new System.Drawing.Size(479, 17);
       this.statusToolStripStatusLabel.Spring = true;
       this.statusToolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
@@ -246,87 +247,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
       this.snapshotsGroupBox.Controls.Add(this.tableLayoutPanel1);
       this.snapshotsGroupBox.Controls.Add(this.snapshotsListBox);
-      this.snapshotsGroupBox.Location = new System.Drawing.Point(12, 225);
+      this.snapshotsGroupBox.Location = new System.Drawing.Point(14, 260);
       this.snapshotsGroupBox.Name = "snapshotsGroupBox";
-      this.snapshotsGroupBox.Size = new System.Drawing.Size(320, 194);
+      this.snapshotsGroupBox.Size = new System.Drawing.Size(373, 224);
       this.snapshotsGroupBox.TabIndex = 2;
       this.snapshotsGroupBox.TabStop = false;
       this.snapshotsGroupBox.Text = "&Snapshots";
-      // 
-      // secondComboBox
-      // 
-      this.secondComboBox.Dock = System.Windows.Forms.DockStyle.Top;
-      this.secondComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-      this.secondComboBox.FormattingEnabled = true;
-      this.secondComboBox.Location = new System.Drawing.Point(157, 16);
-      this.secondComboBox.Name = "secondComboBox";
-      this.secondComboBox.Size = new System.Drawing.Size(148, 21);
-      this.secondComboBox.TabIndex = 3;
-      this.secondComboBox.SelectedIndexChanged += new System.EventHandler(this.secondComboBox_SelectedIndexChanged);
-      // 
-      // secondLabel
-      // 
-      this.secondLabel.AutoSize = true;
-      this.secondLabel.Location = new System.Drawing.Point(154, 0);
-      this.secondLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-      this.secondLabel.Name = "secondLabel";
-      this.secondLabel.Size = new System.Drawing.Size(47, 13);
-      this.secondLabel.TabIndex = 2;
-      this.secondLabel.Text = "Sec&ond:";
-      // 
-      // firstComboBox
-      // 
-      this.firstComboBox.Dock = System.Windows.Forms.DockStyle.Top;
-      this.firstComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-      this.firstComboBox.FormattingEnabled = true;
-      this.firstComboBox.Location = new System.Drawing.Point(3, 16);
-      this.firstComboBox.Name = "firstComboBox";
-      this.firstComboBox.Size = new System.Drawing.Size(148, 21);
-      this.firstComboBox.TabIndex = 1;
-      this.firstComboBox.SelectedIndexChanged += new System.EventHandler(this.firstComboBox_SelectedIndexChanged);
-      // 
-      // firstLabel
-      // 
-      this.firstLabel.AutoSize = true;
-      this.firstLabel.Location = new System.Drawing.Point(0, 0);
-      this.firstLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-      this.firstLabel.Name = "firstLabel";
-      this.firstLabel.Size = new System.Drawing.Size(29, 13);
-      this.firstLabel.TabIndex = 0;
-      this.firstLabel.Text = "F&irst:";
-      // 
-      // snapshotsListBox
-      // 
-      this.snapshotsListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-      this.snapshotsListBox.FormattingEnabled = true;
-      this.snapshotsListBox.IntegralHeight = false;
-      this.snapshotsListBox.Location = new System.Drawing.Point(6, 19);
-      this.snapshotsListBox.Name = "snapshotsListBox";
-      this.snapshotsListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-      this.snapshotsListBox.Size = new System.Drawing.Size(308, 123);
-      this.snapshotsListBox.TabIndex = 0;
-      // 
-      // loadFileListDelayTimer
-      // 
-      this.loadFileListDelayTimer.Tick += new System.EventHandler(this.loadFileListDelayTimer_Tick);
-      // 
-      // viewButton
-      // 
-      this.viewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.viewButton.Location = new System.Drawing.Point(338, 70);
-      this.viewButton.Name = "viewButton";
-      this.viewButton.Size = new System.Drawing.Size(75, 23);
-      this.viewButton.TabIndex = 5;
-      this.viewButton.Text = "&View...";
-      this.viewButton.UseVisualStyleBackColor = true;
-      this.viewButton.Click += new System.EventHandler(this.viewButton_Click);
-      // 
-      // compareBackgroundWorker
-      // 
-      this.compareBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.compareBackgroundWorker_DoWork);
-      this.compareBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.compareBackgroundWorker_RunWorkerCompleted);
       // 
       // tableLayoutPanel1
       // 
@@ -339,21 +265,97 @@
       this.tableLayoutPanel1.Controls.Add(this.secondComboBox, 1, 1);
       this.tableLayoutPanel1.Controls.Add(this.secondLabel, 1, 0);
       this.tableLayoutPanel1.Controls.Add(this.firstComboBox, 0, 1);
-      this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 148);
+      this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 171);
       this.tableLayoutPanel1.Name = "tableLayoutPanel1";
       this.tableLayoutPanel1.RowCount = 2;
       this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
       this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-      this.tableLayoutPanel1.Size = new System.Drawing.Size(308, 40);
+      this.tableLayoutPanel1.Size = new System.Drawing.Size(359, 46);
       this.tableLayoutPanel1.TabIndex = 1;
+      // 
+      // firstLabel
+      // 
+      this.firstLabel.AutoSize = true;
+      this.firstLabel.Location = new System.Drawing.Point(0, 0);
+      this.firstLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+      this.firstLabel.Name = "firstLabel";
+      this.firstLabel.Size = new System.Drawing.Size(32, 15);
+      this.firstLabel.TabIndex = 0;
+      this.firstLabel.Text = "F&irst:";
+      // 
+      // secondComboBox
+      // 
+      this.secondComboBox.Dock = System.Windows.Forms.DockStyle.Top;
+      this.secondComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+      this.secondComboBox.FormattingEnabled = true;
+      this.secondComboBox.Location = new System.Drawing.Point(182, 18);
+      this.secondComboBox.Name = "secondComboBox";
+      this.secondComboBox.Size = new System.Drawing.Size(174, 23);
+      this.secondComboBox.TabIndex = 3;
+      this.secondComboBox.SelectedIndexChanged += new System.EventHandler(this.secondComboBox_SelectedIndexChanged);
+      // 
+      // secondLabel
+      // 
+      this.secondLabel.AutoSize = true;
+      this.secondLabel.Location = new System.Drawing.Point(179, 0);
+      this.secondLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+      this.secondLabel.Name = "secondLabel";
+      this.secondLabel.Size = new System.Drawing.Size(49, 15);
+      this.secondLabel.TabIndex = 2;
+      this.secondLabel.Text = "Sec&ond:";
+      // 
+      // firstComboBox
+      // 
+      this.firstComboBox.Dock = System.Windows.Forms.DockStyle.Top;
+      this.firstComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+      this.firstComboBox.FormattingEnabled = true;
+      this.firstComboBox.Location = new System.Drawing.Point(3, 18);
+      this.firstComboBox.Name = "firstComboBox";
+      this.firstComboBox.Size = new System.Drawing.Size(173, 23);
+      this.firstComboBox.TabIndex = 1;
+      this.firstComboBox.SelectedIndexChanged += new System.EventHandler(this.firstComboBox_SelectedIndexChanged);
+      // 
+      // snapshotsListBox
+      // 
+      this.snapshotsListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.snapshotsListBox.FormattingEnabled = true;
+      this.snapshotsListBox.IntegralHeight = false;
+      this.snapshotsListBox.ItemHeight = 15;
+      this.snapshotsListBox.Location = new System.Drawing.Point(7, 17);
+      this.snapshotsListBox.Name = "snapshotsListBox";
+      this.snapshotsListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+      this.snapshotsListBox.Size = new System.Drawing.Size(359, 146);
+      this.snapshotsListBox.TabIndex = 0;
+      // 
+      // loadFileListDelayTimer
+      // 
+      this.loadFileListDelayTimer.Tick += new System.EventHandler(this.loadFileListDelayTimer_Tick);
+      // 
+      // viewButton
+      // 
+      this.viewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+      this.viewButton.Location = new System.Drawing.Point(394, 81);
+      this.viewButton.Name = "viewButton";
+      this.viewButton.Size = new System.Drawing.Size(87, 27);
+      this.viewButton.TabIndex = 5;
+      this.viewButton.Text = "&View";
+      this.viewButton.UseVisualStyleBackColor = true;
+      this.viewButton.Click += new System.EventHandler(this.viewButton_Click);
+      // 
+      // compareBackgroundWorker
+      // 
+      this.compareBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.compareBackgroundWorker_DoWork);
+      this.compareBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.compareBackgroundWorker_RunWorkerCompleted);
       // 
       // MainForm
       // 
       this.AcceptButton = this.takeSnapshotButton;
-      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+      this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.CancelButton = this.exitButton;
-      this.ClientSize = new System.Drawing.Size(425, 444);
+      this.ClientSize = new System.Drawing.Size(496, 512);
       this.Controls.Add(this.viewButton);
       this.Controls.Add(this.snapshotsGroupBox);
       this.Controls.Add(this.statusStrip);
@@ -364,6 +366,7 @@
       this.Controls.Add(this.compareButton);
       this.Controls.Add(this.takeSnapshotButton);
       this.Controls.Add(this.hivesGroupBox);
+      this.Font = new System.Drawing.Font("Segoe UI", 9F);
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Name = "MainForm";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

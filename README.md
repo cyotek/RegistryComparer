@@ -1,9 +1,11 @@
 Cyotek Registry Comparer
 ========================
 
-![gui](gui.png)
+![Screenshot of the GUI](gui.png)
 
 A simple tool to capture snapshots of the state of one more registry keys, then compare them for differences. Includes both an easy to use GUI and CLI clients.
+
+> As with many of my tools, this was put together in a hurry, used for its intended purpose then essentially forgotten about. Bugs are likely to be present and performance could be improved. Caveat emptor!
 
 Clients
 -------
@@ -60,7 +62,7 @@ Screenshots
 
 ![cli-compare](cli-compare.png)
 
-Compare a pair of snapshots using the CLI tool
+Comparing a pair of snapshots using the CLI tool
 
 ![gui-compare](gui-compare.png)
 

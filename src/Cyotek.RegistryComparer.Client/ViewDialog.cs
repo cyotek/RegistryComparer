@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
 namespace Cyotek.RegistryComparer.Client
 {
-  internal partial class ViewDialog : Form
+  internal partial class ViewDialog : BaseForm
   {
     #region Constants
 

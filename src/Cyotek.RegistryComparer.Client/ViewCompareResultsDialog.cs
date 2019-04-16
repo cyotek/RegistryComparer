@@ -1,11 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Forms;
 
 namespace Cyotek.RegistryComparer.Client
 {
-  internal partial class ViewCompareResultsDialog : Form
+  internal partial class ViewCompareResultsDialog : BaseForm
   {
     #region Constants
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Cyotek.RegistryComparer.Client
 {
-  internal sealed partial class MainForm : Form
+  internal sealed partial class MainForm : BaseForm
   {
     #region Constructors
 
@@ -113,7 +113,7 @@ namespace Cyotek.RegistryComparer.Client
     {
       if (firstComboBox.SelectedItem == null || secondComboBox.SelectedItem == null)
       {
-        MessageBox.Show("Please select two snapsnots to compare.", this.Text, MessageBoxButtons.OK,
+        MessageBox.Show("Please select two snapshots to compare.", this.Text, MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
       }
       else
@@ -123,10 +123,10 @@ namespace Cyotek.RegistryComparer.Client
         this.SetStatus("Comparing snapshots...");
 
         options = new TaskOptions
-                  {
-                    FileName1 = ((FileInfo)firstComboBox.SelectedItem).FullPath,
-                    FileName2 = ((FileInfo)secondComboBox.SelectedItem).FullPath
-                  };
+        {
+          FileName1 = ((FileInfo)firstComboBox.SelectedItem).FullPath,
+          FileName2 = ((FileInfo)secondComboBox.SelectedItem).FullPath
+        };
 
         compareBackgroundWorker.RunWorkerAsync(options);
       }
@@ -136,7 +136,7 @@ namespace Cyotek.RegistryComparer.Client
     {
       if (snapshotsListBox.SelectedItems.Count == 0)
       {
-        MessageBox.Show("Please select the snapsnot files to delete.", this.Text, MessageBoxButtons.OK,
+        MessageBox.Show("Please select the snapshot files to delete.", this.Text, MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
       }
       else if (
@@ -157,7 +157,7 @@ namespace Cyotek.RegistryComparer.Client
           }
           catch (Exception ex)
           {
-            MessageBox.Show($"Failed to delete file. {ex.GetBaseException(). Message}", this.Text,
+            MessageBox.Show($"Failed to delete file. {ex.GetBaseException().Message}", this.Text,
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
           }
         }
@@ -283,11 +283,11 @@ namespace Cyotek.RegistryComparer.Client
     private void outputFolderBrowseButton_Click(object sender, EventArgs e)
     {
       using (FolderBrowserDialog dialog = new FolderBrowserDialog
-                                          {
-                                            Description = "Select the &folder to store snapshots",
-                                            ShowNewFolderButton = true,
-                                            SelectedPath = outputFolderTextBox.Text
-                                          })
+      {
+        Description = "Select the &folder to store snapshots",
+        ShowNewFolderButton = true,
+        SelectedPath = outputFolderTextBox.Text
+      })
       {
         if (dialog.ShowDialog(this) == DialogResult.OK)
         {
@@ -318,7 +318,19 @@ namespace Cyotek.RegistryComparer.Client
     {
       statusToolStripStatusLabel.Text = message;
 
+      this.SetControls(string.IsNullOrEmpty(message));
       this.UseWaitCursor = !string.IsNullOrEmpty(message);
+    }
+
+    private void SetControls(bool enabled)
+    {
+      foreach (Control control in this.Controls)
+      {
+        if (!object.ReferenceEquals(control, exitButton))
+        {
+          control.Enabled = enabled;
+        }
+      }
     }
 
     private void SetToolTip(ComboBox comboBox)
@@ -359,7 +371,13 @@ namespace Cyotek.RegistryComparer.Client
       }
       else
       {
-        this.AddSnapshot((RegistrySnapshot)e.Result);
+        RegistrySnapshot snapshot;
+
+        snapshot = (RegistrySnapshot)e.Result;
+
+        this.AddSnapshot(snapshot);
+
+        MessageBox.Show(string.Format("Snapshot created.\n\nFile saved to '{0}'.", snapshot.FileName), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
       }
     }
 
@@ -375,10 +393,10 @@ namespace Cyotek.RegistryComparer.Client
       this.SetStatus("Taking snapshot...");
 
       options = new TaskOptions
-                {
-                  Keys = keys,
-                  OutputPath = path
-                };
+      {
+        Keys = keys,
+        OutputPath = path
+      };
 
       snapshotBackgroundWorker.RunWorkerAsync(options);
     }
@@ -387,7 +405,7 @@ namespace Cyotek.RegistryComparer.Client
     {
       if (snapshotsListBox.SelectedItem == null)
       {
-        MessageBox.Show("Please select the snapsnot to view.", this.Text, MessageBoxButtons.OK,
+        MessageBox.Show("Please select the snapshot to view.", this.Text, MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
       }
       else

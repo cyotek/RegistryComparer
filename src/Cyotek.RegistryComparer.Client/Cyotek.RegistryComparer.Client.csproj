@@ -61,6 +61,9 @@
     <Compile Include="AboutDialog.designer.cs">
       <DependentUpon>AboutDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ChangeResultListView.cs">
       <SubType>Component</SubType>
     </Compile>
