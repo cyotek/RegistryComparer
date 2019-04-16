@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using NUnit.Framework;
 
 namespace Cyotek.RegistryComparer.Tests

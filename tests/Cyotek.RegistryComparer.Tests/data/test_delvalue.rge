@@ -1,4 +1,4 @@
-﻿{
+{
   "Keys": [
     {
       "Name": "HKEY_CURRENT_USER\\SOFTWARE\\Cyotek\\Registry Comparer\\Tests",
@@ -35,6 +35,11 @@
               "Name": "binary",
               "Type": 3,
               "Value": "45 50 53 49 4c 4f 4e"
+            },
+            {
+              "Name": "none",
+              "Type": -1,
+              "Value": ""
             }
           ]
         }

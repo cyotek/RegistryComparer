@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
 using Microsoft.Win32;
@@ -96,6 +96,7 @@ namespace Cyotek.RegistryComparer.Tests
       subKey.SetValue("dword", int.MaxValue, RegistryValueKind.DWord);
       subKey.SetValue("qword", long.MaxValue, RegistryValueKind.QWord);
       subKey.SetValue("binary", Encoding.ASCII.GetBytes("EPSILON"), RegistryValueKind.Binary);
+      subKey.SetValue("none", new byte[0], RegistryValueKind.None);
     }
 
     private void CreateSubKey3()

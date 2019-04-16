@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Security;
 using System.Security.AccessControl;
 using System.Text;
@@ -21,6 +22,8 @@ namespace Cyotek.RegistryComparer
     private const RegistryKeyPermissionCheck _permissions = RegistryKeyPermissionCheck.Default;
 
     private const RegistryRights _rights = RegistryRights.EnumerateSubKeys | RegistryRights.QueryValues;
+
+    private readonly string[] _emptyArray = new string[0];
 
     #endregion
 
@@ -128,15 +131,29 @@ namespace Cyotek.RegistryComparer
       if (key.ValueCount != 0)
       {
         RegistryValueSnapshotCollection children;
+        string[] names;
 
         children = new RegistryValueSnapshotCollection(snapshot);
 
-        foreach (string name in key.GetValueNames())
+        try
         {
+          names = key.GetValueNames();
+        }
+        catch (IOException)
+        {
+          // system error, saw this in latest Windows 10
+          // when trying to scan HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager\CreativeEventCache\SubscribedContent-314559
+          names = _emptyArray;
+        }
+
+        for (int i = 0; i < names.Length; i++)
+        {
+          string name;
           string value;
           RegistryValueKind type;
           object rawValue;
 
+          name = names[i];
           type = key.GetValueKind(name);
           rawValue = this.GetValue(key, type, name);
           value = this.TransformRawValue(type, rawValue);
@@ -151,6 +168,7 @@ namespace Cyotek.RegistryComparer
     private object GetDefaultValue(RegistryValueKind type)
     {
       object defaultValue;
+
       switch (type)
       {
         case RegistryValueKind.String:
@@ -167,9 +185,15 @@ namespace Cyotek.RegistryComparer
         case RegistryValueKind.Unknown:
           defaultValue = _defaultBinaryValue;
           break;
+        case RegistryValueKind.None:
+          // GitHub Issue: #1
+          // Not entirely sure what value I should use in the case of a None, went with a null
+          defaultValue = null;
+          break;
         default:
           throw new ArgumentOutOfRangeException();
       }
+
       return defaultValue;
     }
 
@@ -231,7 +255,7 @@ namespace Cyotek.RegistryComparer
       }
       catch (SecurityException ex)
       {
-        Trace.WriteLine($"EXCEPTION: {ex.GetBaseException(). Message}");
+        Trace.WriteLine($"EXCEPTION: {ex.GetBaseException().Message}");
         subKey = null;
       }
 

@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 
 namespace Cyotek.RegistryComparer.Tests
 {
@@ -18,25 +18,35 @@ namespace Cyotek.RegistryComparer.Tests
     #region  Tests
 
     [Test]
-    [Ignore]
     public void TakeSnapshot_should_return_snapshot_of_single_key()
     {
       // arrange
       RegistrySnapshotBuilder target;
-      RegistryKeySnapshot actual;
-      RegistryKeySnapshot expected;
+      RegistryKeySnapshot snapshot;
+      RegistryKeySnapshot compare;
+      RegistrySnapshot lhs;
+      RegistrySnapshot rhs;
+      ChangeResult[] expected;
+      ChangeResult[] actual;
 
       target = new RegistrySnapshotBuilder();
-      expected = this.LoadBaseSnapshot().
-                      Keys[0];
-      expected.Name = "Tests";
+      compare = this.LoadBaseSnapshot().Keys[0];
+      compare.Name = "Tests";
+      lhs = new RegistrySnapshot();
+      lhs.Keys.Add(compare);
+
+      expected = new ChangeResult[0];
 
       this.CreateBase();
 
       // act
-      actual = target.TakeSnapshot(this.FullRootKeyName);
+      snapshot = target.TakeSnapshot(this.FullRootKeyName);
 
       // assert
+      rhs = new RegistrySnapshot();
+      rhs.Keys.Add(snapshot);
+      actual = new RegistrySnapshotComparer(lhs, rhs).Compare();
+      CollectionAssert.AreEqual(expected, actual);
     }
 
     #endregion
