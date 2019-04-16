@@ -9,3 +9,4 @@ dist/
 *.ncrunchproject
 *.user
 *.cache
+*.rge
