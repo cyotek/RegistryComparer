@@ -1,4 +1,4 @@
-﻿#define CATCHEXCEPTIONS
+#define CATCHEXCEPTIONS
 #if DEBUG
 #undef CATCHEXCEPTIONS
 #endif
@@ -88,7 +88,7 @@ namespace Cyotek.RegistryComparer.CommandLineInterface
 
       if (action == ProgramAction.None)
       {
-        Console.WriteLine("At least one key to snapsnot or two files to compare must be specified.");
+        Console.WriteLine("At least one key to snapshot or two files to compare must be specified.");
       }
       else
       {
