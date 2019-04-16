@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+2.0.1
+-----
+
+### Fixed
+* Fixed a crash that could occur when trying to obtain values from empty `RegistryKeySnapshotCollection` or `RegistryValueSnapshotCollection` instances
+
 2.0.0
 -----
 

@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Newtonsoft.Json;
 
@@ -33,7 +34,12 @@ namespace Cyotek.RegistryComparer
 
     public bool TryGetValue(string key, out RegistryValueSnapshot value)
     {
-      return this.Dictionary.TryGetValue(key, out value);
+      IDictionary<string, RegistryValueSnapshot> dictionary;
+
+      dictionary = this.Dictionary;
+      value = null;
+
+      return dictionary != null && dictionary.TryGetValue(key, out value);
     }
 
     protected override string GetKeyForItem(RegistryValueSnapshot item)
