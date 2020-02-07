@@ -222,7 +222,9 @@ namespace Cyotek.RegistryComparer
           rootHive = Registry.PerformanceData;
           break;
         case "HKEY_DYN_DATA":
+#pragma warning disable CS0618 // Type or member is obsolete
           rootHive = Registry.DynData;
+#pragma warning restore CS0618 // Type or member is obsolete
           break;
         default:
           throw new ArgumentException("Invalid hive.", nameof(hive));
